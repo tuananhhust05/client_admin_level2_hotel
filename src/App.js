@@ -42,10 +42,10 @@ function App() {
       <BrowserRouter basename="/client_admin_level2_hotel">
         <Routes>
           {/* Route chồng route */}
-          <Route path="/">
+          <Route exact path="/client_admin_level2_hotel">
             {/* nếu /login thì dẫn tới component Login*/}
-            <Route path="login" element={<Login />} />  
-            <Route path="register" element={<Register />} />  
+            <Route path="/login" element={<Login />} />  
+            <Route path="/register" element={<Register />} />  
             <Route
               index
               element={
@@ -55,7 +55,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="users">
+            <Route path="/users">
               <Route
                 index
                 element={
@@ -76,7 +76,7 @@ function App() {
                 }
               /> */}
               <Route
-                path="new"
+                path="/new"
                 element={
                   <ProtectedRoute>
                      {/* userInputs là mảng chứa dữ liệu  */}
@@ -85,7 +85,7 @@ function App() {
                 }
               />
             </Route>
-            <Route path="hotels">
+            <Route path="/hotels">
               <Route
                 index
                 element={
@@ -115,7 +115,7 @@ function App() {
                 }
               />
             </Route>
-            <Route path="rooms">
+            <Route path="/rooms">
               {/* Danh sách các phòng => dữ liệu cứng  */}
               <Route
                 index
@@ -144,7 +144,7 @@ function App() {
                 }
               />
             </Route>
-            <Route path="orders">
+            <Route path="/orders">
               <Route
                 index
                 element={
