@@ -39,7 +39,7 @@ function App() {
   // đi từng case một 
   return (
     <div className={darkMode ? "app dark" : "app"}>
-      <BrowserRouter>
+      <BrowserRouter basename="/client_admin_level2_hotel">
         <Routes>
           {/* Route chồng route */}
           <Route path="/">
